@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora JS</title>
+  </head>
+  <body>
+    <h1>App de calculadora</h1>
+    <p>Usando solamente JavaScript</p>
+    <script>
+      let condicion = confirm(
+        "APP DE CALCULADORA SOLAMENTE CON HTML Y JAVASCRIPT"
+      );
+
+      // Condicion para que el codigo se repita a decicion del usuario
+      while (condicion === true) {
+        calculadora();
+        condicion = confirm("Desceas hacer otra operacion?");
+      }
+
+      // CALCULADORA SOLO CON JAVASCRIPT
+      function calculadora() {
+        let num1 = 0;
+        let num2 = 0;
+        let resultado = 0;
+        let seleccion = parseInt(
+          prompt(
+            "Selecciona una operación:\n" +
+              "1. Suma\n" +
+              "2. Resta\n" +
+              "3. Multiplicación\n" +
+              "4. División"
+          )
+        );
+
+        if (seleccion === 1) {
+          num1 = parseFloat(prompt("Ingresa el primer numero"));
+          num2 = parseFloat(prompt("Ingresa el segundo numero"));
+          resultado = parseFloat(num1 + num2);
+          alert(`El resultado de tu suma es ${resultado}`);
+        } else if (seleccion === 2) {
+          num1 = parseFloat(prompt("Ingresa el primer numero"));
+          num2 = parseFloat(prompt("Ingresa el segundo numero"));
+          resultado = parseFloat(num1 - num2);
+          alert(`El resultado de tu resta es: ${resultado}`);
+        } else if (seleccion === 3) {
+          num1 = parseFloat(prompt("Ingresa el primer numero"));
+          num2 = parseFloat(prompt("Ingresa el segundo numero"));
+          resultado = parseFloat(num1 * num2);
+          alert(`El resultado de tu multiplicacion es: ${resultado}`);
+        } else if (seleccion === 4) {
+          num1 = parseFloat(prompt("Ingresa el primer numero"));
+          num2 = parseFloat(prompt("Ingresa el segundo numero"));
+          resultado = parseFloat(num1 / num2);
+          alert(`El resultado de tu divicion es: ${resultado}`);
+        }
+      }
+    </script>
+  </body>
+</html>
