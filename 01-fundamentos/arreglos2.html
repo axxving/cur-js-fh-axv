@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arreglos 2</title>
+  </head>
+  <body>
+    <script>
+      // Arreglo de Juegos
+      let juegos = ["Mario", "Zelda", "Metroid", "Chrono"];
+
+      // Guardando en una variable el primer elemento de un array
+      let primero = juegos[0];
+
+      // Guardando el ultimo elemento del array
+      let ultimo = juegos[juegos.length - 1];
+
+      // Imprimiendo ambos valores
+      console.log(primero, ultimo);
+
+      // Imprimiendo el largo del arregalo o bien, su longitud
+      console.log("Largo: ", juegos.length);
+
+      // Agregando dos elementos al array al final
+      juegos.push("Nuevo juego", "Segundo nuevo juego");
+      console.log(juegos);
+
+      // Eliminando el ultimo elemento del array
+      // .pop no recibe ningun parametro
+      juegos.pop();
+      console.log(juegos);
+
+      // Eliminando el primer elemento del array
+      juegos.shift();
+      console.log(juegos);
+
+      // Agregando uno o mas elementos al principio del array
+      juegos.unshift("PrimerNuevoElemento", "SegundoNuevoElemento");
+      console.log(juegos);
+
+      // Combinando dos arrays
+      let nuevosJuegos = ['Mario 2', 'Yoshi'];
+      let tiendaJuegos = juegos.concat(nuevosJuegos);
+      console.log(tiendaJuegos);
+
+      // Copia de una parte del array dentro de un nuevo array
+      let apartados = juegos.slice(0, 3);
+      console.log('Estos son los apartados: ', apartados);
+
+      // Reemplazar elementos del array
+      let reemplazados = juegos.splice(1, 1, 'Mario 3');
+      console.log('El juego que se reemplazo: ', reemplazados);
+      console.log('Su reemplazo fue:', juegos[1]);
+
+      
+    </script>
+  </body>
+</html>
