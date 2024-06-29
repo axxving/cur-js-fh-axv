@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retornos de las funciones</title>
+  </head>
+  <body>
+    <script>
+      // Retornos de las funciones
+      // Las funciones pueden retornar valores
+      const retornarValor = () => {
+        return 10;
+      };
+
+      console.log(retornarValor());
+
+      const sumar = (valorUno, valorDos) => valorUno + valorDos;
+
+      console.log(sumar(5, 8));
+
+      // Funcion que obtiene un numero aleatorio entero del uno al 10
+      const getAleatorio = () => Math.floor(Math.random() * 10) + 1;
+
+      console.log(getAleatorio());
+    </script>
+  </body>
+</html>
