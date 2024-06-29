@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funciones</title>
+  </head>
+  <body>
+    <script>
+      // Metodo es una funcion que se encuentra dentro de un objeto
+
+      // Funciones en JavaScript tradicional
+      function saludar(nombre) {
+        // console.log(arguments);
+        console.log("Hola Mundo Funcion tradicional: ", nombre);
+      }
+
+      saludar('Alejandro');
+
+      // Ejemplo de funcion de tipo flecha
+      const saludarFlecha = () => {
+        console.log("Hola Mundo Funcion de tipo flecha");
+      }
+
+      saludarFlecha();
+
+      // Ejemplo de funcion anonima
+      const saludarAnonima = function () {
+        console.log("Hola Mundo Funcion anonima");
+      }
+
+      saludarAnonima();
+
+    </script>
+  </body>
+</html>
