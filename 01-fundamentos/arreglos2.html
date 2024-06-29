@@ -48,8 +48,12 @@
       let apartados = juegos.slice(0, 3);
       console.log('Estos son los apartados: ', apartados);
 
+      let posicion = 1;
+      let cantidadBorrar = 1;
+      let reemplazoPorElBorrado = 'Mario 4';
+
       // Reemplazar elementos del array
-      let reemplazados = juegos.splice(1, 1, 'Mario 3');
+      let reemplazados = juegos.splice(posicion, cantidadBorrar, reemplazoPorElBorrado);
       console.log('El juego que se reemplazo: ', reemplazados);
       console.log('Su reemplazo fue:', juegos[1]);
 
