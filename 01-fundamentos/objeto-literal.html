@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objetos literales</title>
+  </head>
+  <body>
+    <script>
+      // Objetos literales
+      let personaje = {
+        nombre: "Goku",
+        codeName: "Sayayin",
+        vivo: true,
+        edad: 50,
+        coords: {
+          lat: 14.1232,
+          lng: -12.3232,
+        },
+        transformaciones: [
+          "Super Sayayin",
+          "Super Sayayin 2",
+          "Super Sayayin 3",
+        ],
+        direccion: {
+          calle: "Kame House",
+          pais: "Tierra",
+        },
+      };
+
+      console.log(personaje);
+
+      // Accediendo a los elementos a travez de notacion de punto
+      console.log("Nombre:", personaje.nombre);
+
+      // Accediendo a los datos a travez de notacion de corchete
+      console.log("Calle", personaje["direccion"]["calle"]);
+
+      // Numero de tranformaciones
+      console.log('Numero de transformaciones: ', personaje.transformaciones.length);
+
+      // Ultima tranformacion del personaje
+      console.log('Ultima tranformacion: ', personaje.transformaciones[personaje.transformaciones.length - 1] );
+
+      // Mostrando si el personaje esta vivo
+      console.log('El personaje esta vido?:', personaje.vivo ? 'Si esta vivo' : 'Se desvivio');
+    </script>
+  </body>
+</html>
