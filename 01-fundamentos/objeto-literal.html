@@ -37,13 +37,49 @@
       console.log("Calle", personaje["direccion"]["calle"]);
 
       // Numero de tranformaciones
-      console.log('Numero de transformaciones: ', personaje.transformaciones.length);
+      console.log(
+        "Numero de transformaciones: ",
+        personaje.transformaciones.length
+      );
 
       // Ultima tranformacion del personaje
-      console.log('Ultima tranformacion: ', personaje.transformaciones[personaje.transformaciones.length - 1] );
+      console.log(
+        "Ultima tranformacion: ",
+        personaje.transformaciones[personaje.transformaciones.length - 1]
+      );
 
       // Mostrando si el personaje esta vivo
-      console.log('El personaje esta vido?:', personaje.vivo ? 'Si esta vivo' : 'Se desvivio');
+      console.log(
+        "El personaje esta vido?:",
+        personaje.vivo ? "Si esta vivo" : "Se desvivio"
+      );
+
+      // Eliminar una propiedad del objeto literal
+      delete personaje.edad;
+
+      console.log(personaje);
+
+      // Agregando un valor a las propiedades del objeto
+      personaje.casado = true;
+
+      // Trabajar objeto como si fuera un objeto, es decir que cada valor dentro del objeto sea un par de valor usando entries
+      const entriesPares = Object.entries(personaje);
+      console.log(entriesPares);
+
+      // Bloqueando la modificaciones de valores en el objeto
+      // Congela las asignaciones directas pero no a los objetos dentro del objeto
+      Object.freeze(personaje);
+      personaje.dinero = 45454545;
+
+      console.log(personaje);
+
+      // Listado de todas las propiedades que tiene el objeto
+      // Para que sea un arreglo
+      const propiedades = Object.getOwnPropertyNames(personaje);
+      // Valores
+      const valores = Object.values(personaje);
+
+      console.log(propiedades, valores);
     </script>
   </body>
 </html>
