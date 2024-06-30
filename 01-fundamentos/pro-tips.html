@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pro Tip #1</title>
+  </head>
+  <body>
+    <script>
+      const crearPersona = (nombre, apellido) => {
+        return {
+          nombre,
+          apellido,
+        };
+      };
+
+      const persona = crearPersona("Alejandro", "Hernandez");
+
+      console.log(persona);
+
+      // Despues del parametro rest no puede venir ningun otro argumento
+      // ...args
+
+      // Funcion normal que retorna los arguments predefinidos
+      function imprimeArgumentos() {
+        console.log(arguments);
+      }
+
+      // Funcion flecha que no contiene esos arguments predefinidos y puedo ponerselos yo, pero con la restriccion de que, despues de args no puede ir ningun otro parametro, y args usa el operador rest
+      const imprimeArgumentos2 = (...args) => {
+        return args;
+      };
+
+      // Cuando se ponen llaves en el console.log se hace un objeto con pares de valores para visualizar la informacion
+
+      //  const argumentos = imprimeArgumentos2(1, 2, 3, 4, 5);
+      //  console.log({ argumentos });
+
+      const [cazado, vivo, nombre, saludo] = imprimeArgumentos2(1, 2, 3, 4);
+      console.log({ cazado, vivo, nombre, saludo });
+
+      const { apellido } = crearPersona("Alejandro", "Hernandez");
+      console.log(apellido);
+
+      // Dandole un nuevo nombre a la variable
+      const { apellido: nuevoApellido } = crearPersona(
+        "Alejandro",
+        "Hernandez"
+      );
+      console.log({ nuevoApellido });
+
+      // Destructuracion de argumentos
+      const tony = {
+        nombre: "Tony",
+        apellido: "Stark",
+        codeName: "Iron Man",
+        vivo: false,
+        edad: 45,
+        trajes: ["Mark I", "Mark V", "Hulkbuster"],
+      };
+
+      // const imprimePropiedades = (personaje) => {
+      //   console.log(personaje.nombre);
+      //   console.log(personaje.apellido);
+      //   console.log(personaje.codeName);
+      //   console.log(personaje.vivo);
+      //   console.log(personaje.edad);
+      //   console.log(personaje.trajes);
+      // };
+
+      const imprimePropiedades = ({ nombre, apellido }) => {
+        console.log({ nombre });
+        console.log({ apellido });
+      };
+
+      imprimePropiedades(tony);
+
+      // Tambien se pueden poner valores por defecto desde los parametros de la funcion
+    </script>
+  </body>
+</html>
