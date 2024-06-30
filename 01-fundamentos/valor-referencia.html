@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valor referencia</title>
+  </head>
+  <body>
+    <script>
+      // PRIMITIVOS X VALOR
+      // OBJETOS X REFERENCIA
+
+      let a = 10;
+      let b = a;
+      a = 30;
+      // console.log({ a, b });
+
+      // Objeto literal con el valor de nombre 'Juan '
+      let juan = { nombre: "Juan" };
+      // Objeto ana con el valor de nombre 'Juan'
+      // let ana = {juan};
+
+      // Spread separa los elementos
+      // Esto hace que se rompa la referencia y se pueda hacer una copia del objeto pero con diferentes valores, ya que estos ya no estan conectados al objeto original
+      let ana = { ...juan };
+      // Cambiamos el valor de nombre de juan por ana, pero afecta a todos los demas objetos, ya que todos los objetos son pasador por referencia
+
+      ana.nombre = "Ana";
+
+      // console.log({ juan, ana });
+
+      // Funcion que cambia el nombre
+
+      // rest = une todos los argumentos en una sola variable y conviertelos en un objeto
+      const cambiarNombre = ({ ...persona }) => {
+        persona.nombre = "Tony";
+        return persona;
+      };
+
+      let peter = { nombre: "Peter" };
+
+      let tony = cambiarNombre(peter);
+
+      // console.log({ peter, tony });
+
+      // USANDO ARREGLOS
+      const frutas = ["Manzana", "Pera", "Pinia"];
+      // Como es arreglo se pone entre corchetes
+      // Se rompe la referencia usando spread, y asi, ya no se modifican ambos elementos
+      const otrasFrutas = [...frutas];
+
+      otrasFrutas.push("Manzana");
+
+      console.table({ frutas, otrasFrutas });
+    </script>
+  </body>
+</html>
