@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logica Booleana</title>
+  </head>
+  <body>
+    <script>
+      const regresaTrue = () => {
+        console.log("Regresa true");
+        return true;
+      };
+
+      const regresaFalse = () => {
+        console.log("Regresa false");
+        return false;
+      };
+
+      // Negacion de un bool que devuelve el valor opuesto al existente
+      console.warn("Not o la negacion");
+      console.log(!true);
+
+      // AND Si todos los valores son verdaderos
+      console.log(true && true);
+
+      // OR Si uno de los valores es verdadero
+      console.log(true || false);
+    </script>
+  </body>
+</html>
