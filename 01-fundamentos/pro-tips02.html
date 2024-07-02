@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pro tip #2</title>
+  </head>
+  <body>
+    <script>
+      console.log("Asignaciones");
+
+      const soyUndefined = undefined;
+      const soyNull = null;
+      const soyFalso = false;
+
+      // Esto toma en cuenta solo al ultimo valor
+      // Todas las condiciones tienen que dar true
+      const a1 = true && "Hola Mundo" && 150;
+
+      const a2 = 'Hello' && 'Mundo' && soyFalso;
+
+      console.log({ a1, a2}); 
+    </script>
+  </body>
+</html>
