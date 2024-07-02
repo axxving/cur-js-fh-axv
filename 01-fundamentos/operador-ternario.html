@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operador ternario</title>
+  </head>
+  <body>
+    <h1>Prender un foco</h1>
+    <script>
+      // Ejemplo de un operador ternario
+      let foco = true;
+
+      // Imprimiendo en consola el estado del foco
+      foco
+        ? console.log("El foco prendio")
+        : console.log("El foco esta apagado");
+
+      // Practica de Fernando Herrera
+      const dia = 2;
+
+      const horaActual = 10;
+
+      let horaApertura;
+
+      let mensaje; // Si esta abierto o esta cerrado, hoy abrimos a las xx
+
+      horaApertura
+        ? console.log("Esta abierto")
+        : console.log("Aun no abrimos");
+
+      // Usando el operador ternario
+      horaApertura = [0, 6].includes(dia) ? 9 : 11;
+
+      mensaje = horaActual >= horaApertura ? "Abierto" : "Cerrado";
+
+      // El valor de algo va a ser igual a la condicion de un verdadero o falso, en base a ello, imprime una respuesta
+
+      console.log({ horaApertura, mensaje });
+    </script>
+  </body>
+</html>
