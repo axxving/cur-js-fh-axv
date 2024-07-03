@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Do While</title>
+</head>
+
+<body>
+    <script>
+        const carros = [
+            'Ford',
+            'Mazda',
+            'Audi',
+            'Toyota'
+        ];
+
+        let i = 0;
+
+        while (i < carros.length) {
+            if (i === 1) {
+                i++;
+                console.log('Paso por if');
+                continue;
+            }
+
+            console.log(carros[i]);
+            i++;
+        }
+
+        let j = 0;
+
+        // Do While
+        console.log('++++++++ Do While +++++++++++');
+
+        do {
+            console.log(carros[j])
+            j++;
+        } while (carros[j]);
+    </script>
+</body>
+
+</html>
