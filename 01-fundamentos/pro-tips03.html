@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pro tips #3</title>
+  </head>
+  <body>
+    <script>
+      const elMayor = (a, b) => {
+        return a > b ? a : b;
+      };
+
+      console.log(elMayor(100000, 45));
+
+      let tiene = true;
+
+      let noTiene = false;
+
+      // Si una persona cuenta con una membresia o no
+      //   const tieneMembresia = (miembro) => {
+      //     return miembro ? "Entra gratis" : "Tiene que pagar";
+      //   };
+
+      const tieneMembresia = (miembro) => (miembro ? "Paga" : "No paga");
+
+      console.log(tieneMembresia(tiene));
+
+      let siEsAmigooNoEsAmigo = true;
+
+      let arrayAmigos = [
+        "Edgar",
+        "Diego",
+        "Ian",
+        siEsAmigooNoEsAmigo ? "Renata" : "Santiago",
+        // Funcion anonima autoinvocada
+        (() => "Nick Fyry")(),
+        elMayor(50, 10),
+      ];
+
+      console.log(arrayAmigos);
+
+      // Sistema de notas para los alumnos
+      let notaAlumna = 40;
+
+      let notaImuesta =
+        notaAlumna >= 90
+          ? "A+"
+          : notaAlumna >= 80
+          ? "A"
+          : notaAlumna >= 70
+          ? "B"
+          : notaAlumna >= 60
+          ? "B-"
+          : notaAlumna >= 50
+          ? "C"
+          : "Reprobado";
+
+      console.log({ notaAlumna, notaImuesta });
+    </script>
+  </body>
+</html>
