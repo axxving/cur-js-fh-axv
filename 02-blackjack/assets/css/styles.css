@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: aliceblue;
+}
+
+.titulo {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
+  background-color: #1f1f1f;
+  color: aliceblue;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+body {
+  background-color: #2f4f30;
+  overflow-x: hidden;
+  padding-bottom: 100px;
+}
+
+.carta {
+  width: 100px;
+  position: relative;
+  left: 100px;
+  margin-left: -75px;
+}
+
+#computadora-cartas,
+#jugador-cartas {
+  height: 200px;
+}
