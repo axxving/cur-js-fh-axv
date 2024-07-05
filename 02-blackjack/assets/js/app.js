@@ -10,6 +10,7 @@ let tipos = ["C", "D", "H", "S"];
 
 let especiales = ["A", "J", "Q", "K"];
 
+/* Esta funcion genera un nuevo deck */
 const crearDeck = () => {
   for (let i = 2; i <= 10; i++) {
     for (let tipo of tipos) {
@@ -23,7 +24,6 @@ const crearDeck = () => {
     }
   }
 
-  console.log(deck);
   deck = _.shuffle(deck);
   console.log(deck);
 
@@ -31,3 +31,20 @@ const crearDeck = () => {
 };
 
 crearDeck();
+
+/* Esta funcion me permite tomar una carta */
+const pedirCarta = () => {
+  // Evitar que se sigan pidiendo cartas si ya no hay en el deck
+  if (deck.length === 0) {
+    throw "No hay cartas en el deck";
+  }
+
+  const carta = deck.pop();
+
+  console.log({ carta, deck });
+
+  return carta;
+};
+
+pedirCarta();
+
