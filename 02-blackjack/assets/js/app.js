@@ -1,16 +1,15 @@
-/*  2C = Dos de treboles
-    2D = Dos de diamantes
-    2H = Dos de corazones
-    2S = Dos de espadas
-*/
-
 let deck = [];
-
 let tipos = ["C", "D", "H", "S"];
-
 let especiales = ["A", "J", "Q", "K"];
+let puntosJugador = 0;
+let puntosComputadora = 0;
 
-/* Esta funcion genera un nuevo deck */
+// Referencias de html
+const btnPedir = document.querySelector("#btnPedir");
+
+// puntos de jugaodr
+const puntosHTML = document.querySelectorAll('small');
+
 const crearDeck = () => {
   for (let i = 2; i <= 10; i++) {
     for (let tipo of tipos) {
@@ -25,32 +24,34 @@ const crearDeck = () => {
   }
 
   deck = _.shuffle(deck);
+
   console.log(deck);
 
   return deck;
 };
 
-crearDeck();
-
-/* Esta funcion me permite tomar una carta */
 const pedirCarta = () => {
-  // Evitar que se sigan pidiendo cartas si ya no hay en el deck
   if (deck.length === 0) {
     throw "No hay cartas en el deck";
   }
-
   const carta = deck.pop();
-
-  console.log({ carta, deck });
-
   return carta;
 };
-
-pedirCarta();
 
 const valorCarta = (carta) => {
   const valor = carta.substring(0, carta.length - 1);
   return isNaN(valor) ? (valor === "A" ? 11 : 10) : valor * 1;
 };
 
-console.log(valorCarta(pedirCarta()));
+crearDeck();
+
+// Eventos
+btnPedir.addEventListener("click", () => {
+  const carta = pedirCarta();
+  puntosJugador = puntosJugador + valorCarta(carta);
+  console.log(puntosJugador);
+  puntosHTML[0].innerText = puntosJugador;
+
+  
+});
+
