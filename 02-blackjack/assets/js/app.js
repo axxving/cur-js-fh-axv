@@ -7,6 +7,9 @@ let puntosComputadora = 0;
 // Referencias de html
 const btnPedir = document.querySelector("#btnPedir");
 
+// Cartas del jugador
+const divCartasJugador = document.querySelector("#jugador-cartas");
+
 // puntos de jugaodr
 const puntosHTML = document.querySelectorAll('small');
 
@@ -52,6 +55,21 @@ btnPedir.addEventListener("click", () => {
   console.log(puntosJugador);
   puntosHTML[0].innerText = puntosJugador;
 
-  
+  // Generando la imagen
+  const imgCarta = document.createElement("img");
+  // Agregando la ruta
+  imgCarta.src = `./assets/cartas/${carta}.png`;
+  // Agregando la clase
+  imgCarta.classList = 'carta mt-3';
+  // Insertando la carta
+  divCartasJugador.append(imgCarta);
+
+  if ( puntosJugador > 21 ) {
+    console.log("Perdiste");
+  } else if ( puntosJugador === 21 ) {
+    console.log('21, genial');
+    btnPedir.disabled = true;
+  }
+
 });
 
