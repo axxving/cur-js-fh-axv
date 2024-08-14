@@ -29,6 +29,25 @@
       for (i = 0; i < 7; i++) {
         console.log(diasSemana[i]);
       }
+
+      // Funcion que obtiene el dia de la semana
+      const obtenerDia = (dia) => {
+        // Imprimiendo en consola el dia de la semana mediante el uso de un objeto
+        let semana = {
+          1: "Domingo",
+          2: "Lunes",
+          3: "Martes",
+          4: "Miercoles",
+          5: "Jueves",
+          6: "Viernes",
+          7: "Sabado",
+        };
+
+        console.log(`El dia de la semana que elegiste es: ${semana[dia]}`)
+
+      };
+
+      obtenerDia(6);
     </script>
   </body>
 </html>

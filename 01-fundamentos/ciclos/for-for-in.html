@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>For and for in</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        const heroes = ['batman', 'superman', 'el chapulin', 'supersam', 'green arrow'];
+      const heroes = [
+        "batman",
+        "superman",
+        "el chapulin",
+        "supersam",
+        "green arrow",
+      ];
 
-        console.log('Cantidad de elementos del array:' + heroes.length);
+      console.log("Cantidad de elementos del array:" + heroes.length);
 
-        console.log('== For Tradicional ==');
+      console.log("== For Tradicional ==");
 
-        // Estructura de For
-        for (let i = 0; i < heroes.length; i++) {
-            console.log(heroes[i]);
-        }
+      // Estructura de For
+      for (let i = 0; i < heroes.length; i++) {
+        console.log(heroes[i]);
+      }
 
-        // Estructura de for in
-        console.log('++++++ For In ++++++++');
-        for (let i in heroes) {
-            console.log(heroes[i])
-        }
+      // Estructura de for in
+      console.log("++++++ For In ++++++++");
+      for (let i in heroes) {
+        console.log(heroes[i]);
+      }
 
-        // Estructura de for of
-        console.log('****** For Of ********');
-        for (let heroe of heroes) {
-            console.log(heroe)
-        }
+      // Estructura de for of
+      console.log("****** For Of ********");
+      for (let heroe of heroes) {
+        console.log(heroe);
+      }
     </script>
-</body>
-
+  </body>
 </html>
