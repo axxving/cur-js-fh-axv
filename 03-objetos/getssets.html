@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gets y sets</title>
+  </head>
+  <body>
+    <script>
+      // nueva clase
+      class Comida {
+        // propiedades de la clase
+        comida;
+
+        // constructor de la clase
+        constructor() {}
+
+        // set solo recibe un argumento
+        set setComidaFavorita(comida) {
+          this.comida = comida.toUpperCase();
+        }
+
+        // get para obtener un valor
+        get getComidaFavorita() {
+          return "Esto es lo que retorne usando un get";
+        }
+      }
+
+      // instancia de comida
+      const pay = new Comida();
+
+      // usando el set
+      pay.setComidaFavorita = "Esto es un pay";
+
+      // imprimiendo el valor
+      console.log(pay.comida);
+      console.log(pay.getComidaFavorita);
+    </script>
+  </body>
+</html>
