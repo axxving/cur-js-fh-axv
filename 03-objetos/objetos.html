@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases basicas</title>
+</head>
+<body>
+    <script>
+        // nueva clase
+        class PersonaHombre {
+            // viene por defecto con use strict
+
+            // propiedades de la clase
+            nombre;
+            codigo;
+            frase;
+
+            // constructor de la clase
+            constructor( nombre, codigo, frase ) {
+                // console.log('Hello!');
+                // nunca retorna undefined
+                this.codigo = codigo;
+                this.frase = frase;
+                this.nombre = nombre;
+            }
+        }
+
+        // instancia de la clase
+        const spiderman = new PersonaHombre('Pepe', 'Hombre arania', 'Hello');
+        const ironMan = new PersonaHombre('tony', 'Hombre de acero', 'Iam chingon');
+        console.log({spiderman, ironMan})
+    </script>
+</body>
+</html>
