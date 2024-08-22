@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metodos en las clases</title>
+  </head>
+  <body>
+    <script>
+      // nueva clase
+      class Heroe {
+        // propiedades
+        nombre;
+        nombreHeroe;
+        frase;
+
+        // constructor
+        constructor(nombre, nombreHeroe, frase) {
+          // asignar valor a las propiedades
+          this.nombre = nombre;
+          this.nombreHeroe = nombreHeroe;
+          this.frase = frase;
+        }
+
+        // creando un nuevo metodo
+        quienSoy() {
+          console.log(`Soy ${this.nombre}, y soy ${this.nombreHeroe}`);
+        }
+
+        miFrase() {
+          console.log(`Mi frase es: ${this.frase}`);
+        }
+      }
+
+      // creando nueva instancia de la clase
+      const ironMan = new Heroe("Tony Stark", "IronMan", "Yo soy IronMan");
+      // ejecutar el metodo
+      console.log(ironMan.quienSoy());
+      console.log(ironMan.miFrase());
+    </script>
+  </body>
+</html>
