@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Herencias</title>
+  </head>
+  <body>
+    <script>
+      class Persona {
+        // propiedades estaticas
+        static _conteo = 0;
+
+        static get getConteo() {
+          console.log(Persona._conteo);
+        }
+
+        static mensaje() {
+          console.log(this.nombre);
+          console.log("Hola a todos soy un metodo estatico");
+        }
+
+        // propiedades
+        nombre;
+        codigo;
+        frase;
+        comida;
+
+        // constructor
+        constructor(nombre, codigo, frase, comida) {
+          this.nombre = nombre;
+
+          Persona._conteo++;
+        }
+      }
+
+      // Extendiendo heroe
+      class Heroe extends Persona {
+        // propiedad de heroe
+        clan;
+      }
+
+      const Fer = new Heroe("Fer", 4545, 'Frase 1', 'Hamburguesa');
+
+    </script>
+  </body>
+</html>

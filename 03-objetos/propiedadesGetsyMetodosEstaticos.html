@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades Gets y Metodos Estaticos</title>
+</head>
+<body>
+    <script>
+        class Persona {
+            // propiedades estaticas
+            static _conteo = 0;
+
+            static get getConteo() {
+               console.log(Persona._conteo);
+            }
+
+            // propiedades
+            nombre;
+
+            // constructor
+            constructor( nombre ) {
+                this.nombre = nombre;
+
+                Persona._conteo++;
+            }
+        }
+
+        const Fer = new Persona('Fer');
+        const Pepe = new Persona('Pepe');
+        const Pedro = new Persona('Pedro');
+        const Juan = new Persona('Juan');
+
+        console.log(Persona.getConteo)
+    </script>
+</body>
+</html>
