@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SingleTon = Instancia unica de clase</title>
+  </head>
+  <body>
+    <script>
+      // Singleton instancia unica de mi clase
+      // nueva clase
+      class Singleton {
+        static instancia; // undefined
+        nombre = "";
+
+        constructor(nombre = "nombre") {
+          // validacion de la instancia
+          if (!!Singleton.instancia) {
+            return Singleton.instancia;
+          }
+
+          Singleton.instancia = this;
+          this.nombre = nombre;
+        }
+      }
+
+      // Primer y unico valor de la instancia
+      const instancia1 = new Singleton("Pepe");
+      const instancia2 = new Singleton("Pepes");
+      const instancia3 = new Singleton("Pepessss");
+
+      console.log(instancia1);
+      console.log(instancia2);
+      console.log(instancia3);
+    </script>
+  </body>
+</html>
