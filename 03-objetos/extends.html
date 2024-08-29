@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extends</title>
+</head>
+<body>
+    <script>
+        // Clase persona
+        class Persona {
+            // Propiedades
+            nombre;
+            apellido;
+            puesto;
+
+            // Constructor
+            constructor(nombre, apellido, puesto) {
+                this.nombre = nombre;
+                this.apellido = apellido;
+                this.puesto = puesto;
+            }
+
+            // Metodos
+            saludar() {
+                console.log(`Hola mi nombre es ${this.nombre} ${this.apellido}, y soy ${this.puesto}`);
+            }
+        }
+
+        // instancia de la clase persona
+        const Perez = new Persona("Alejandro", "Hernandez", "Desarrollador");
+        Perez.saludar();
+
+        // Extendiendo de la clase persona = hacer una copia que hereda propiedades y metodos
+        class Heroe extends Persona {
+            // Propiedades de la clase
+            poder;
+
+            // herenado un constructor
+            constructor(nombre, apellido, puesto, poder) {
+                super(nombre, apellido, puesto, poder);
+
+                this.poder = poder;
+            }
+
+            miPoder() {
+                console.log(`mi super poder es ${this.poder}`)
+            }
+        }
+
+        // instancia de la clase heroe
+        const spiderman = new Heroe("Peter", "Parker", "Avenger", "aracnido");
+        spiderman.saludar();
+        spiderman.miPoder();
+    </script>
+</body>
+</html>
