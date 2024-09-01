@@ -8,6 +8,7 @@ import { crearDeck } from "./useCases/createDeck.js";
  * 2S = Two of Spades
  */
 
+/* Variable global DECK*/
 let deck = [];
 const tipos = ["C", "D", "H", "S"];
 const especiales = ["A", "J", "Q", "K"];
@@ -25,7 +26,8 @@ const divCartasComputadora = document.querySelector("#computadora-cartas");
 
 const puntosHTML = document.querySelectorAll("small");
 
-crearDeck(  );
+/* Almacenando el valor del nuevo deck usando el modulo correspondiente */
+deck = crearDeck( tipos, especiales );
 
 // Esta función me permite tomar una carta
 const pedirCarta = () => {
