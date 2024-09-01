@@ -27,7 +27,7 @@ const divCartasComputadora = document.querySelector("#computadora-cartas");
 const puntosHTML = document.querySelectorAll("small");
 
 /* Almacenando el valor del nuevo deck usando el modulo correspondiente */
-deck = crearDeck( tipos, especiales );
+deck = crearDeck(tipos, especiales);
 
 // Esta función me permite tomar una carta
 const pedirCarta = () => {
