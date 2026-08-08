@@ -1,12 +1,12 @@
 # Curso de JavaScript - Fernando Herrera
 
-Repositorio dedicado a almacenar las prácticas, ejercicios y proyectos realizados durante el curso de **JavaScript** impartido por **Fernando Herrera** en Udemy.
+Repositorio dedicado a almacenar las prácticas y ejercicios realizados durante el curso de **JavaScript** impartido por **Fernando Herrera** en Udemy.
 
-## 📚 Contenido
+## Contenido
 
-El repositorio está organizado por secciones correspondientes a los temas vistos durante el curso.
+El repositorio está organizado por secciones correspondientes a los diferentes temas vistos durante el curso.
 
-Algunos de los proyectos y ejercicios incluidos son:
+Algunos de los ejercicios y proyectos incluidos son:
 
 - Fundamentos de JavaScript
 - Blackjack
@@ -14,12 +14,12 @@ Algunos de los proyectos y ejercicios incluidos son:
 - Blackjack con Vite
 - Ejercicios prácticos de JavaScript
 
-## 🛠️ Tecnologías
+## Tecnologías
 
 - JavaScript
 - HTML
 
-## 📂 Estructura
+## Estructura
 
 ```text
 .
@@ -27,3 +27,20 @@ Algunos de los proyectos y ejercicios incluidos son:
 ├── 02-blackjack/
 ├── 03-objetos/
 └── 05-blackjack-vite/
+```
+
+Cada directorio contiene los ejercicios correspondientes a una sección del curso.
+
+## Ejecución
+
+La mayoría de los ejercicios pueden ejecutarse directamente abriendo el archivo `index.html` en el navegador.
+
+También se puede utilizar un servidor de desarrollo local como **Live Server**.
+
+## Propósito
+
+Este repositorio tiene como objetivo documentar mi progreso durante el curso y servir como referencia para repasar conceptos y fundamentos de JavaScript.
+
+## Licencia
+
+Este repositorio contiene ejercicios realizados con fines educativos y de aprendizaje.
